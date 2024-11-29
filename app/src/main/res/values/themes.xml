@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.InstaCook" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Fullscreen mode configuration -->
+    </style>
+
+    <style name="Theme.InstaCook" parent="Base.Theme.InstaCook" />
+</resources>
