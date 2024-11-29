@@ -11,6 +11,11 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 
 import com.example.instacook.R;
+import com.example.instacook.util.DataProvider;
+import com.example.instacook.util.DataRecipe;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class FeedFragment extends Fragment {
 
@@ -24,10 +29,24 @@ public class FeedFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_feed, container, false);
 
-        int[] imagens = {R.drawable.img_carbonara02, R.drawable.img_feijoada01, R.drawable.img_macarrao_bolonhesa01, R.drawable.img_feijoada02,
+
+
+        /*int[] imagens = {R.drawable.img_carbonara02, R.drawable.img_feijoada01, R.drawable.img_macarrao_bolonhesa01, R.drawable.img_feijoada02,
                 R.drawable.img_carbonara02, R.drawable.img_feijoada01, R.drawable.img_macarrao_bolonhesa01, R.drawable.img_feijoada02};
 
-        int[] likes = {285, 358, 1544, 25, 15772, 873, 8548, 548};
+        int[] likes = {285, 358, 1544, 25, 15772, 873, 8548, 548};*/
+
+        List<DataRecipe> recipes = DataProvider.getRecipes();
+
+        int[] imagens = new int[recipes.size()];
+        int[] likes = new int[recipes.size()];
+
+        for(int i = 0; i < recipes.size(); i++) {
+
+            imagens[i] = recipes.get(i).image;
+            likes[i] = recipes.get(i).likes;
+
+        }
 
         LinearLayout linlayFeed = view.findViewById(R.id.linlay_feed);
 

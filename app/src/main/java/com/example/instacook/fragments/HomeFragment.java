@@ -12,6 +12,10 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 
 import com.example.instacook.R;
+import com.example.instacook.util.DataProvider;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class HomeFragment extends Fragment {
 
@@ -28,20 +32,19 @@ public class HomeFragment extends Fragment {
         TextView tvVerTodos = view.findViewById(R.id.tv_ver_todos);
         tvVerTodos.setText(Html.fromHtml("<u>ver todos</u>"));
 
-        String[] categorias = {"Italiana", "Brasileira", "Japonesa", "Coreana"};
-        int[] imagens = {R.drawable.img_carbonara02, R.drawable.img_feijoada01, R.drawable.img_macarrao_bolonhesa01, R.drawable.img_feijoada02};
+        HashMap<String, Integer> categories = DataProvider.getCategories();
 
         LinearLayout linlayCategorias = view.findViewById(R.id.linlay_categorias1);
 
-        for (int i = 0; i < categorias.length; i++) {
+        for (Map.Entry<String, Integer> entry : categories.entrySet()) {
 
             View itemView = inflater.inflate(R.layout.categorias_home, linlayCategorias, false);
 
             ImageView imgCategoria = itemView.findViewById(R.id.img_categoria1);
             TextView tvCategoria = itemView.findViewById(R.id.tv_categoria1);
 
-            imgCategoria.setImageResource(imagens[i]);
-            tvCategoria.setText(categorias[i]);
+            imgCategoria.setImageResource(entry.getValue());
+            tvCategoria.setText(entry.getKey());
 
             linlayCategorias.addView(itemView);
 

@@ -29,7 +29,7 @@
 
 
     <ImageView
-        android:id="@+id/btn_menu_ingredients"
+        android:id="@+id/btn_menu_category"
         android:layout_width="40dp"
         android:layout_height="35dp"
         android:layout_marginStart="20dp"
@@ -73,7 +73,7 @@
                     android:textSize="16sp" />
 
                 <ImageView
-                    android:id="@+id/ic_busca_ingredients"
+                    android:id="@+id/ic_busca_category"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_marginEnd="15dp"
@@ -106,7 +106,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline13" />
 
     <Button
-        android:id="@+id/btn_back_ingredients"
+        android:id="@+id/btn_back_category"
         android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -123,7 +123,7 @@
         app:rippleColor="#D5D5D5" />
 
     <Button
-        android:id="@+id/btn_next_ingredients"
+        android:id="@+id/btn_next_category"
         android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"

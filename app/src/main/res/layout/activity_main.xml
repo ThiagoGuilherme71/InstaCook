@@ -95,7 +95,7 @@
     </LinearLayout>
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
+        android:id="@+id/fragment_container"
         android:name="com.example.instacook.fragments.HomeFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"

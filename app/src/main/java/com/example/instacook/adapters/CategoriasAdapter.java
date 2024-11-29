@@ -17,10 +17,10 @@ import java.util.Arrays;
 public class CategoriasAdapter extends RecyclerView.Adapter<CategoriasAdapter.ViewHolder> {
 
     private final String[] categorias;
-    private final int[] imagens;
+    private final Integer[] imagens;
     private final boolean[] visibilidade;
 
-    public CategoriasAdapter(String[] categorias, int[] imagens) {
+    public CategoriasAdapter(String[] categorias, Integer[] imagens) {
 
         this.categorias = categorias;
         this.imagens = imagens;

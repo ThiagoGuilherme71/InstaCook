@@ -14,9 +14,16 @@ import android.widget.TextView;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
+import com.example.instacook.MainActivity;
 import com.example.instacook.R;
+import com.example.instacook.util.DataProvider;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class IngredientsFragment extends Fragment {
+
+    public static List<String> selectedIngredients = new ArrayList<>();
 
     public IngredientsFragment() {
 
@@ -31,8 +38,7 @@ public class IngredientsFragment extends Fragment {
         TextView converse = view.findViewById(R.id.tv_converse);
         converse.setText(Html.fromHtml("<u>Converse</u>"));
 
-        String[] ingredientes = {"Feijão Preto", "Carne Seca", "Costela de Porco", "Linguiça Calabresa", "Paio", "Bacon", "Alho", "Cebola", "Folha de Louro", "Sal",
-                "Feijão Preto", "Carne Seca", "Costela de Porco", "Linguiça Calabresa", "Paio", "Bacon", "Alho", "Cebola", "Folha de Louro", "Sal"};
+        List<String> ingredientes = DataProvider.getIngredients();
 
         LinearLayout linlayIngredientes = view.findViewById(R.id.linlay_ingredientes_ingredients);
 
@@ -45,15 +51,26 @@ public class IngredientsFragment extends Fragment {
 
             linlayIngredientes.addView(itemView);
 
-            selecaoIngredientes(btnIngredients, requireContext());
+            selecaoIngredientes(btnIngredients, requireContext(), ingrediente);
 
         }
+
+        Button btnBack = view.findViewById(R.id.btn_back_ingredients);
+        Button btnNext = view.findViewById(R.id.btn_next_ingredients);
+
+        btnBack.setOnClickListener(v -> {
+            ((MainActivity) requireActivity()).navigateToFragment(new HomeFragment());
+        });
+
+        btnNext.setOnClickListener(v -> {
+            ((MainActivity) requireActivity()).navigateToFragment(new CategoryFragment());
+        });
 
         return view;
 
     }
 
-    public static void selecaoIngredientes(Button button, Context context) {
+    public static void selecaoIngredientes(Button button, Context context, String ingrediente) {
 
         final boolean[] isSelected = {false};
 
@@ -64,12 +81,14 @@ public class IngredientsFragment extends Fragment {
                         ContextCompat.getColor(context, R.color.yellow)));
                 button.setTextColor(ColorStateList.valueOf(
                         ContextCompat.getColor(context, R.color.black)));
+                selectedIngredients.remove(ingrediente);
                 isSelected[0] = false;
             } else {
                 button.setBackgroundTintList(ColorStateList.valueOf(
                         ContextCompat.getColor(context, R.color.black)));
                 button.setTextColor(ColorStateList.valueOf(
                         ContextCompat.getColor(context, R.color.yellow)));
+                selectedIngredients.add(ingrediente);
                 isSelected[0] = true;
 
             }

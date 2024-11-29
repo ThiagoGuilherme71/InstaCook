@@ -235,7 +235,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/img_macarrao_bolonhesa01" />
+                app:srcCompat="@drawable/img_lasanha01" />
         </androidx.cardview.widget.CardView>
 
         <LinearLayout
