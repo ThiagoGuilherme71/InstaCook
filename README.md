@@ -31,3 +31,8 @@
 - **Backend/API:** To be integrated or developed
 
 - ## 🛠 Design
+<p align="center">
+  <img src="assets/home.png" width="180" alt=" Preview 1" />
+  <img src="assets/feed.png" width="180" alt=" Preview 2" />
+  <img src="assets/chefAI.png" width="180" alt=" Preview 3" />
+</p>
