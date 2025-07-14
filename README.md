@@ -26,10 +26,6 @@
 
 - **Language:** Java  
 - **Framework:** Native Android (Android SDK)  
-- **Architecture:** MVVM *(or your preferred pattern)*  
-- **Database:** SQLite / Firebase *(as applicable)*  
-- **Backend/API:** To be integrated or developed
-
 - ## 🛠 Design
 <p align="center">
   <img src="assets/home.png" width="180" alt=" Preview 1" />
