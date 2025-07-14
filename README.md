@@ -1,6 +1,6 @@
 # 📱 InstaCook
 
-**InstaCook** is a social media app **currently under development** for food lovers. The goal is to create a simple and intuitive platform where users can share their favorite recipes, explore dishes from others, and connect with fellow home cooks. Post, like, and get inspired — all from your Android device.
+**InstaCook** is a social media app **currently under development** for food lovers. The goal is to create a simple and intuitive platform where users can share their favorite recipes, explore dishes from others, and connect with fellow home cooks. Post, like, and get inspired.
 
 ---
 
